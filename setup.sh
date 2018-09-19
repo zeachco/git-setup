@@ -55,3 +55,17 @@ git config --global --replace-all alias.l "log --oneline --graph"
 curl -o- https://raw.githubusercontent.com/zeachco/git-setup/master/bash_custom.sh > ~/bash_custom.sh
 chmod +x ~/bash_custom.sh
 echo "source ~/bash_custom.sh" >> ~/.bashrc
+
+echo "Done with base script, install additionnal tools?"
+echo ""
+echo "This will install :"
+echo "- shutter screenshoot tool"
+echo "- slack chat client"
+echo "- vscode text/ide"
+echo "- node npx"
+echo "- node nodemon"
+echo ""
+read -n 1 -p  "Press Ctrl-C to cancel, or any key to continue..."
+
+sudo apt install shutter slack vscode -y
+npm i -g npx nodemon
