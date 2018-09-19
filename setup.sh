@@ -20,6 +20,9 @@ nvm install stable
 npm i -g npm
 sudo setcap 'cap_net_bind_service=+ep' `which node`
 
+echo "Changing max notify watcher from $(cat /proc/sys/fs/inotify/max_user_watches) to 524288 (max value)"
+echo "fs.inotify.max_user_watches=524288" | sudo tee -a  /etc/sysctl.conf
+
 read -p "Email for git config: " git_email
 read -p "Full name for git config: " git_name
 
