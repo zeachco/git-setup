@@ -62,8 +62,6 @@ echo "This will install :"
 echo "- shutter screenshoot tool"
 echo "- slack chat client"
 echo "- vscode text/ide"
-echo "- node npx"
-echo "- node nodemon"
 echo ""
 read -n 1 -p  "Press Ctrl-C to cancel, or any key to continue..."
 
