@@ -68,4 +68,3 @@ echo ""
 read -n 1 -p  "Press Ctrl-C to cancel, or any key to continue..."
 
 sudo apt install shutter slack vscode -y
-npm i -g npx nodemon
