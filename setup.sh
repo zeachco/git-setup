@@ -56,13 +56,13 @@ curl -o- https://raw.githubusercontent.com/zeachco/git-setup/master/bash_custom.
 chmod +x ~/bash_custom.sh
 echo "source ~/bash_custom.sh" >> ~/.bashrc
 
-echo "Done with base script, install additionnal tools?"
-echo ""
-echo "This will install :"
-echo "- shutter screenshoot tool"
-echo "- slack chat client"
-echo "- vscode text/ide"
-echo ""
-read -n 1 -p  "Press Ctrl-C to cancel, or any key to continue..."
+#echo "Done with base script, install additionnal tools?"
+#echo ""
+#echo "This will install :"
+#echo "- shutter screenshoot tool"
+#echo "- slack chat client"
+#echo "- vscode text/ide"
+#echo ""
+#read -n 1 -p  "Press Ctrl-C to cancel, or any key to continue..."
 
-sudo apt install shutter slack vscode -y
+#sudo apt install shutter slack vscode -y
