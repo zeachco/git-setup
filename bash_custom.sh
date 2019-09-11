@@ -73,3 +73,19 @@ ipl () {
 killname() {
   sudo kill -9 $(ps -e | grep $1 | awk '{print $1}')
 }
+
+# Start a parcel / TS project in ~/dev taking the first name as an argument
+project() {
+  mkdir ~/dev/$1
+  cd ~/dev/$1
+  git init
+  npm init -y
+  echo "node_modules" > .gitignore
+  mkdir src
+  touch ./src/index.ts
+  yarn add -D parcel-bundler typescript jest
+
+  git add .
+  git commit -m "init"
+  code .
+}
