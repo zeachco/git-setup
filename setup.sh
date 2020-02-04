@@ -8,7 +8,7 @@ echo "- install and configure git"
 echo "- create a bunch of aliases and utils for the cli"
 read -n 1 -p  "Press any key to continue..."
 
-sudo apt-get install git net-tools -y || exit 1;
+sudo apt-get install git net-tools neovim -y || exit 1;
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
 
 export NVM_DIR="$HOME/.nvm"
@@ -17,7 +17,9 @@ export NVM_DIR="$HOME/.nvm"
 
 nvm ls-remote
 nvm install stable
+nvm alias default 13
 npm i -g npm
+npm i -g yarn
 sudo setcap 'cap_net_bind_service=+ep' `which node`
 
 echo "Changing max notify watcher from $(cat /proc/sys/fs/inotify/max_user_watches) to 524288 (max value)"
